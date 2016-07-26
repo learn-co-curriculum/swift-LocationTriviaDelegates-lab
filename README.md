@@ -52,7 +52,7 @@ Apple is fond of using delegation for this exact circumstance in its own classes
     
     * `func addLocationViewController(viewController: AddLocationViewController, didAddLocationNamed name: String)`
 
-2. Add a `weak` property of type `AddLocationViewControllerDelegate` to `AddLocationViewController` called `delegate`. For memory management reasons that we won't get into her, delegate properties should almost always be `weak`.
+2. Add a `weak` property of type `AddLocationViewControllerDelegate` to `AddLocationViewController` called `delegate`. For memory management reasons that we won't get into here, delegate properties should almost always be `weak`.
 
 3. Have `AddLocationViewController` call the functions on the delegate when appropriate:
     * When the user types in the text field, you should check to see whether the entered name is valid. If it is invalid, disable the save button (but re-enable it if the entered name becomes valid). Remember: wire the "Editing Changed" event of the text field to an action method to run some code whenever the text of a field changes.
@@ -78,3 +78,5 @@ Make the keyboard pop up automatically in the name field when `AddLocationViewCo
 Make the return button on the keyboard do the right thing in the `AddLocationViewController`.
 
 Though it would be a little weird, try pushing the Add Location VC onto a navigation stack, rather than presenting it modally. Think about what needs to change in your delegate implementation. But, you shouldn't have to change any code in the Add Location VC itself.
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/swift-LocationTriviaDelegates-lab'>Location Trivia Delegates</a> on Learn.co and start learning to code for free.</p>
